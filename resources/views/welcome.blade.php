@@ -16,7 +16,7 @@
         </div>
     @endif
 
-    <div class="content">
+    <ul class="content">
         <div class="title m-b-md">
             CMR
         </div>
@@ -30,6 +30,27 @@
             <a href="https://forge.laravel.com">Forge</a>
             <a href="https://vapor.laravel.com">Vapor</a>
             <a href="https://github.com/laravel/laravel">GitHub</a>
+        </div>
+
+        <ul>
+            @foreach ($persons as $person)
+                <li>
+                    {{ $loop->index }} - {{$person['firstName']}} - {{$person['lastName']}}
+
+                    @if($loop->first)
+                        <span>First in the loop</span>
+                    @endif
+                    @if($loop->last)
+                        <span>Last in the loop</span>
+                    @endif
+                </li>
+            @endforeach
+        </ul>
+
+        <img src="/img/img.jpeg" alt="Laravel teacher">
+
+        <div>
+            Name: {{$name}} - Age: {{$age}}
         </div>
     </div>
 </div>

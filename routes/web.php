@@ -12,9 +12,24 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $persons = [
+        ['firstName'=>'aaa', 'lastName'=>'bbb'],
+        ['firstName'=>'ccc', 'lastName'=>'ddd'],
+    ];
+
+    $name = request('name');
+
+    return view('welcome', [
+        'persons' => $persons,
+        'name' => request('name'),
+        'age' => request('age')
+    ]);
 });
 
 Route::get('/test', function () {
     return view('test');
 });
+
+// Route::get('user/{id}', function ($id) {
+//     return 'User '.$id;
+// });
