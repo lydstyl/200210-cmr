@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     $persons = [
-        ['firstName'=>'aaa', 'lastName'=>'bbb'],
+        ['firstName'=>'Prénom du suspect', 'lastName'=>'Nom du suspect'],
         ['firstName'=>'ccc', 'lastName'=>'ddd'],
     ];
 
@@ -26,10 +26,12 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/test', function () {
-    return view('test');
+Route::get('/test/{id}', function ($id) {
+    return view('test', [
+        'id' => $id
+    ]);
 });
 
-// Route::get('user/{id}', function ($id) {
-//     return 'User '.$id;
-// });
+Route::get('/user/{id}', function ($id) {
+    return 'User '.$id;
+});
