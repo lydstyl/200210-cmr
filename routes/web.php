@@ -11,27 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    $persons = [
-        ['firstName'=>'Prénom du suspect', 'lastName'=>'Nom du suspect'],
-        ['firstName'=>'ccc', 'lastName'=>'ddd'],
-    ];
+Route::get('/', 'PersonController@index');
 
-    $name = request('name');
-
-    return view('welcome', [
-        'persons' => $persons,
-        'name' => request('name'),
-        'age' => request('age')
-    ]);
-});
+Route::get('/person/{id}', 'PersonController@show');
 
 Route::get('/test/{id}', function ($id) {
     return view('test', [
         'id' => $id
     ]);
-});
-
-Route::get('/user/{id}', function ($id) {
-    return 'User '.$id;
 });
