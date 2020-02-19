@@ -35,14 +35,8 @@
         <ul>
             @foreach ($persons as $person)
                 <li>
-                    {{ $loop->index }} - {{$person['firstName']}} - {{$person['lastName']}}
 
-                    @if($loop->first)
-                        <span>First in the loop</span>
-                    @endif
-                    @if($loop->last)
-                        <span>Last in the loop</span>
-                    @endif
+                    {{ $person->name }} - {{ $person->type }} - {{ $person->entreprise }} - {{ $person->id }} - {{ $person->created_at }} - {{ $person->updated_at }}
                 </li>
             @endforeach
         </ul>
