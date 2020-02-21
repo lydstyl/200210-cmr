@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', 'PersonController@index');
-
-Route::get('/person/{id}', 'PersonController@show');
+Route::get('/persons', 'PersonController@index');
+Route::get('/persons/create', 'PersonController@create');
+Route::get('/persons/{id}', 'PersonController@show');
 
 Route::get('/test/{id}', function ($id) {
     return view('test', [

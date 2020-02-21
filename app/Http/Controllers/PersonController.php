@@ -22,7 +22,7 @@ class PersonController extends Controller
 
         $name = request('name');
     
-        return view('welcome', [
+        return view('persons.index', [
             'persons' => $persons,
             'name' => request('name'),
             'age' => request('age')
@@ -31,6 +31,13 @@ class PersonController extends Controller
 
     public function show($id)
     {
-        return 'Person '.$id;
+        return view('persons.show', [
+            'id' => $id
+        ]);
+
+    }
+    public function create()
+    {
+        return view('persons.create');
     }
 }
