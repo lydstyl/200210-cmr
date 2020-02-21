@@ -31,8 +31,10 @@ class PersonController extends Controller
 
     public function show($id)
     {
+        $person = Person::findOrFail($id);
+
         return view('persons.show', [
-            'id' => $id
+            'person' => $person
         ]);
 
     }
