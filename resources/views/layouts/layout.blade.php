@@ -13,10 +13,20 @@
         <link rel="stylesheet" href="/css/main.css">
     </head>
     <body>
-        @yield('content')
+        <div class="container">
+            <header>
+                <nav>
+                    <a href="/">Home</a>
+                    <a href="/persons/create">/persons/create</a>  
+                    <a href="/persons">persons</a>  
+                </nav>
+            </header>
 
-        <footer>
-            <p>Copyright 2020 Dev Nord CMR</p>
-        </footer>
+            @yield('content')
+
+            <footer>
+                <p>Copyright 2020 Dev Nord CMR</p>
+            </footer>
+        </div>
     </body>
 </html>

@@ -35,8 +35,9 @@
         <ul>
             @foreach ($persons as $person)
                 <li>
-
-                    {{ $person->name }} - {{ $person->type }} - {{ $person->entreprise }} - {{ $person->id }} - {{ $person->created_at }} - {{ $person->updated_at }}
+                    <a href="/persons/{{ $person->id }}">
+                        {{ $person->name }} - {{ $person->type }} - {{ $person->entreprise }}
+                    </a>
                 </li>
             @endforeach
         </ul>
