@@ -46,10 +46,16 @@ class PersonController extends Controller
     
     public function store()
     {
-        error_log(request('name'));
-        error_log(request('type'));
-        error_log(request('entreprise'));
+        // error_log(request('name'));
+        
+        $person = new Person();
+        $person->name = request('name');
+        $person->type = request('type');
+        $person->entreprise = request('entreprise');
+        // error_log($person);
 
-        return redirect('/');
+        $person->save();
+
+        return redirect('/')->with('msg', 'Person added');
     }
 }

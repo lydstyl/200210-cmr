@@ -5,6 +5,9 @@
     <div class="title m-b-md">
         Welcome to CMR 
     </div>
+    <p class="msg">
+      {{ session('msg') }}
+    </p>
     <ul>
       <li>
         <a href="/persons">persons</a>  
