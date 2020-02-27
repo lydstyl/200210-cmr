@@ -46,13 +46,14 @@ class PersonController extends Controller
     
     public function store()
     {
+        // return request('advantages');
         // error_log(request('name'));
         
         $person = new Person();
         $person->name = request('name');
         $person->type = request('type');
         $person->entreprise = request('entreprise');
-        // error_log($person);
+        $person->advantages = request('advantages');
 
         $person->save();
 

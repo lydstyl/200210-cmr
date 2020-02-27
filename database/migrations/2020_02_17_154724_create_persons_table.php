@@ -19,6 +19,7 @@ class CreatePersonsTable extends Migration
             $table->string('type');
             $table->string('entreprise');
             $table->string('name');
+            $table->json('advantages'); // php artisan migrate:refresh // loose data
         });
     }
 

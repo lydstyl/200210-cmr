@@ -23,6 +23,25 @@
             <option value="startup">Start Up</option>
         </select>
 
+        <fieldset>
+            <label>Avantages</label>
+
+            <input type="checkbox" name="advantages[]" value="partial time">
+            <span>Partial time</span>
+
+            <input type="checkbox" name="advantages[]" value="flexible hours">
+            <span>Flexible hours</span>
+
+            <input type="checkbox" name="advantages[]" value="remote">
+            <span>Remote</span>
+
+            <input type="checkbox" name="advantages[]" value="parking">
+            <span>Parking</span>
+            
+            <input type="checkbox" name="advantages[]" value="transport">
+            <span>Transport</span>
+        </fieldset>
+
         <input type="submit" value="Add person">
     </form>
 </div>
