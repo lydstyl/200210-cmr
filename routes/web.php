@@ -16,6 +16,7 @@ Route::get('/', function(){
 });
 Route::get('/persons', 'PersonController@index');
 Route::get('/persons/create', 'PersonController@create');
+Route::post('/persons', 'PersonController@store');
 Route::get('/persons/{id}', 'PersonController@show');
 
 Route::get('/test/{id}', function ($id) {

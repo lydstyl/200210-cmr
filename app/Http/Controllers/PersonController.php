@@ -38,8 +38,18 @@ class PersonController extends Controller
         ]);
 
     }
+
     public function create()
     {
         return view('persons.create');
+    }
+    
+    public function store()
+    {
+        error_log(request('name'));
+        error_log(request('type'));
+        error_log(request('entreprise'));
+
+        return redirect('/');
     }
 }

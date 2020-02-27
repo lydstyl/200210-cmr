@@ -5,13 +5,15 @@
 <div class="wrapper create-person">
     <h1>Create a New Person</h1>
     <form action="/persons" method="POST">
+        <!-- Protection for Cross-site request forgery -->
+        @csrf
         <label for="name">Your name:</label>
         <input type="text" id="name" name="name">
 
         <label for="type">Type:</label>
         <select name="type" id="type">
             <option value="freelance">Freelance</option>
-            <option value="cid">CDI</option>
+            <option value="cdi">CDI</option>
         </select>
 
         <label for="entreprise">Entreprise:</label>
