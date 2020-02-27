@@ -11,6 +11,9 @@
 |
 */
 
+Route::get('/', function(){
+    return view('welcome');
+});
 Route::get('/persons', 'PersonController@index');
 Route::get('/persons/create', 'PersonController@create');
 Route::get('/persons/{id}', 'PersonController@show');
