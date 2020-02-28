@@ -57,6 +57,15 @@ class PersonController extends Controller
 
         $person->save();
 
-        return redirect('/')->with('msg', 'Person added');
+        return redirect('/persons')->with('msg', 'Person added');
+    }
+
+    public function destroy($id)
+    {
+        $person = Person::findOrFail($id);
+
+        $person->delete();
+
+        return redirect('/persons')->with('msg', 'Person deleted');
     }
 }

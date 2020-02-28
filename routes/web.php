@@ -18,6 +18,7 @@ Route::get('/persons', 'PersonController@index');
 Route::get('/persons/create', 'PersonController@create');
 Route::post('/persons', 'PersonController@store');
 Route::get('/persons/{id}', 'PersonController@show');
+Route::delete('/persons/{id}', 'PersonController@destroy');
 
 Route::get('/test/{id}', function ($id) {
     return view('test', [

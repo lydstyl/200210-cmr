@@ -17,6 +17,14 @@
     </ul>
 
     <p class="more-infos">Id: {{ $person->id }} - Created: {{ $person->created_at }} - Updated: {{ $person->updated_at }}</p>
+
+    <form action="/persons/{{ $person->id }}" method='POST'>
+        @csrf
+        
+        @method('DELETE') <!-- method POST because some browsers doesn't understand DELETE but we change it to DELETE -->
+        
+        <button>Delete</button>
+    </form>
 </div>
 <a href="/persons" class="back">Back to all persons</a>
 @endsection
