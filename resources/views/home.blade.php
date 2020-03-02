@@ -15,6 +15,7 @@
                     @endif
 
                     You are logged in!
+                    <p><a href="/persons">View all /persons</a></p>
                 </div>
             </div>
         </div>
