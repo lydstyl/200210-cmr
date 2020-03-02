@@ -25,3 +25,7 @@ Route::get('/test/{id}', function ($id) {
         'id' => $id
     ]);
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
