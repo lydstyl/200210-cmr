@@ -35,7 +35,8 @@
         <ul>
             @foreach ($persons as $person)
                 <li>
-                    <a href="/persons/{{ $person->id }}">
+                    <!-- <a href="/persons/{{ $person->id }}"> -->
+                    <a href="{{route('persons.show', $person->id)}}">
                         {{ $person->name }} - {{ $person->type }} - {{ $person->entreprise }}
                     </a>
                 </li>

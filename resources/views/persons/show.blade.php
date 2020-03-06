@@ -18,7 +18,8 @@
 
     <p class="more-infos">Id: {{ $person->id }} - Created: {{ $person->created_at }} - Updated: {{ $person->updated_at }}</p>
 
-    <form action="/persons/{{ $person->id }}" method='POST'>
+    <!-- <form action="/persons/{{ $person->id }}" method='POST'> -->
+    <form action="{{route('persons.destroy', $person->id)}}" method='POST'>
         @csrf
         
         @method('DELETE') <!-- method POST because some browsers doesn't understand DELETE but we change it to DELETE -->

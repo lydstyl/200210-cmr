@@ -14,11 +14,11 @@
 Route::get('/', function(){
     return view('welcome');
 });
-Route::get('/persons', 'PersonController@index');
-Route::get('/persons/create', 'PersonController@create');
-Route::post('/persons', 'PersonController@store');
-Route::get('/persons/{id}', 'PersonController@show');
-Route::delete('/persons/{id}', 'PersonController@destroy');
+Route::get('/persons', 'PersonController@index')->name('persons.index')->middleware('auth'); // protected route
+Route::get('/persons/create', 'PersonController@create')->name('persons.create');
+Route::post('/persons', 'PersonController@store')->name('persons.store');
+Route::get('/persons/{id}', 'PersonController@show')->name('persons.show');
+Route::delete('/persons/{id}', 'PersonController@destroy')->name('persons.destroy');
 
 Route::get('/test/{id}', function ($id) {
     return view('test', [

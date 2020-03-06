@@ -4,7 +4,8 @@
 
 <div class="wrapper create-person">
     <h1>Create a New Person</h1>
-    <form action="/persons" method="POST">
+    <!-- <form action="/persons" method="POST"> -->
+    <form action="{{route('persons.store')}}" method="POST">
         <!-- Protection for Cross-site request forgery -->
         @csrf
         <label for="name">Your name:</label>
