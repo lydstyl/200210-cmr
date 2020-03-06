@@ -26,6 +26,8 @@ Route::get('/test/{id}', function ($id) {
     ]);
 });
 
-Auth::routes();
+Auth::routes([
+    'register'=>false // do not generate the /register route
+]);
 
 Route::get('/home', 'HomeController@index')->name('home');
